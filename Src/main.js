@@ -9,7 +9,7 @@ window.addEventListener('scroll', function () {
     
 
     if (window.scrollY > header.style.width+200) {
-        header.style.backgroundColor = '#333'
+        header.style.backgroundColor = 'var(--headfoot-background)'
         header.style.padding = '10px 0';
     } else {
         header.style.background = 'none'
@@ -19,11 +19,13 @@ window.addEventListener('scroll', function () {
     if (window.scrollY > skills.getBoundingClientRect().top+1300 && window.scrollY < opinions.getBoundingClientRect().top+1800) {
         skillsBar.forEach(bar => {
             bar.style.width="100%"
+            bar.style.backgroundColor="green"
         });
         
     } else {
         skillsBar.forEach(bar => {
             bar.style.width="0%"
+            bar.style.backgroundColor="var(--text-color)"
         });
         
     }
