@@ -3,6 +3,7 @@ window.addEventListener('scroll', function () {
     var title = document.querySelector('.title');
     var menuNav = document.querySelector('.menu__nav');
     var skillsBar = document.querySelectorAll('.skills--item--bar');
+    var skillsLevel = document.querySelectorAll('.skills--item--level');
     var skills = document.querySelector('.skills');
     var aboutme = document.querySelector('.aboutme');
     var opinions = document.querySelector('.opinions');
@@ -16,10 +17,12 @@ window.addEventListener('scroll', function () {
         header.style.padding = '20px 0';
     }
 
-    if (window.scrollY > skills.getBoundingClientRect().top+1300 && window.scrollY < opinions.getBoundingClientRect().top+1800) {
+    if (window.scrollY > skills.getBoundingClientRect().top+1800 && window.scrollY < opinions.getBoundingClientRect().top+2500) {
+        i=0;
         skillsBar.forEach(bar => {
-            bar.style.width="100%"
+            bar.style.width=skillsLevel[i].textContent;
             bar.style.backgroundColor="green"
+            i++;
         });
         
     } else {

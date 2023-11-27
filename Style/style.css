@@ -23,6 +23,7 @@ section {
     padding: 50px 0;
     text-align: center;
     background-color: var(--background-color);
+    padding: 100px;
 }
 
 .container {
@@ -132,16 +133,10 @@ header {
 .aboutme--text {
     font-size: 1.2em;
     line-height: 1.6;
+    text-justify: newspaper;
 }
 
 /* Estilos de las secciones Works y Services */
-.works--container,
-.services--container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
 .works--item,
 .services--item {
     width: 300px;
@@ -153,6 +148,7 @@ header {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
+    text-align: center;
 }
 
 .works--item:hover,
@@ -163,10 +159,6 @@ header {
 .works--item--description,
 .services--item--description {
     opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
     transition: opacity 0.3s ease-in-out;
@@ -175,6 +167,19 @@ header {
 .works--item:hover .works--item--description,
 .services--item:hover .services--item--description {
     opacity: 1;
+}
+
+.services--list, .works--list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilos de la sección works */
+.works--item img {
+    width: 120%;
+    margin-left: -10%;
+    margin-top: -7%;
 }
 
 /* Estilos de la sección Skills */
@@ -222,8 +227,9 @@ header {
 
 .opinions--list {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center
 }
 
 /* Opinions Magic card */
@@ -253,8 +259,10 @@ header {
     height: var(--size);
     border-radius: 50%;
     transform: translateY(-50%);
-    background: var(--background-color);
-    background: linear-gradient(to bottom, var(--link-color) 0%, var(--hover-color) 100%);
+    background-image: url(../Src/Img/hero-bg.jpg);
+    background-size: 170%;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
     transition: all .3s ease-in-out;
 }
@@ -317,7 +325,7 @@ header {
 }
 
 .contact--form button {
-    background-color: var(--footer-background);
+    background-color: var(--headfoot-background);
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -327,12 +335,17 @@ header {
 
 .contact--form button:hover {
     background-color: var(--secondary-color);
+    color: var(--headfoot-background);
 }
 
 .footer {
     background-color: var(--headfoot-background);
     color: #fff;
-    padding: 20px 0;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer--container {
