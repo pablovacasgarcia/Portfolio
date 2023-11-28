@@ -1,15 +1,17 @@
+/* Definición de variables personalizadas */
 :root {
-    --font-family: 'Arial', sans-serif;
-    --primary-color: #fff;
-    --secondary-color: #ffd700;
-    --background-color: #f2f2f2;
-    --box-shadow-color: rgba(0, 0, 0, 0.1);
-    --text-color: #333;
-    --link-color: #42caff;
-    --hover-color: #e81aff;
-    --headfoot-background: #333;
+    --font-family: 'Arial', sans-serif;  /* Fuente principal */
+    --primary-color: #fff;               /* Color principal */
+    --secondary-color: #ffd700;          /* Color secundario */
+    --background-color: #f2f2f2;        /* Color de fondo */
+    --box-shadow-color: rgba(0, 0, 0, 0.1);  /* Color de sombra */
+    --text-color: #333;                 /* Color de texto principal */
+    --link-color: #42caff;              /* Color de enlaces */
+    --hover-color: #e81aff;             /* Color de hover */
+    --headfoot-background: #333;        /* Color de encabezado/pie de página */
 }
 
+/* Estilos generales del body */
 body {
     font-family: var(--font-family);
     margin: 0;
@@ -18,19 +20,21 @@ body {
     scroll-behavior: smooth;
 }
 
-
+/* Estilos para las secciones generales */
 section {
     padding: 50px 0;
     text-align: center;
     background-color: var(--background-color);
-    padding: 100px;
+    padding: 5vw;
 }
 
+/* Contenedor general */
 .container {
     width: 80%;
     margin: 0 auto;
 }
 
+/* Estilos del encabezado */
 header {
     scroll-behavior: smooth;
     position: fixed;
@@ -46,23 +50,33 @@ header {
     align-items: center;
 }
 
+/* Título principal */
 .title {
     font-size: 2vw;
     margin-left: 2%;
     align-items: center;
 }
 
+/* Menú de navegación */
 .menu__nav {
     display: flex;
     justify-content: center;
     margin-right: 2%;
 }
 
+/* Ocultar elementos del menú en el toggle */
+.menu--toggle--label,
+.menu--toggle--input {
+    display: none;
+}
+
+/* Estilos de la lista de navegación */
 .menu__nav__list {
     list-style: none;
     display: flex;
 }
 
+/* Estilos de los enlaces del menú */
 .menu__nav__list__link {
     margin-right: 20px;
 }
@@ -75,10 +89,12 @@ header {
     transition: color 0.3s ease;
 }
 
-.menu__nav__list__link a:hover {
+.menu__nav__list__link a:hover,
+.footer--nav ul a:hover {
     color: var(--secondary-color);
 }
 
+/* Estilos de la sección Hero */
 .hero {
     background-image: url(../Src/Img/hero-bg.jpg);
     background-size: cover;
@@ -90,6 +106,7 @@ header {
     justify-content: space-around;
 }
 
+/* Estilos específicos del contenido del Hero */
 .hero--content {
     margin-top: 10%;
 }
@@ -97,6 +114,7 @@ header {
 .hero--image {
     margin-top: 5%;
 }
+
 
 .hero--content--name {
     font-size: 3em;
@@ -108,12 +126,18 @@ header {
     margin-bottom: 20px;
 }
 
-.hero--content--github {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background: url('ruta/a/tu/imagen/github.png') no-repeat;
-    text-indent: -9999px;
+.hero--content--github img{
+    width: 5vw;
+    height: 5vw;
+    margin-top: 3%;
+    transition: all 0.5s ease;
+}
+
+.hero--content--github img:hover{
+    width: 7vw;
+    height: 7vw;
+    
+    margin-top: 2%;
 }
 
 .hero--image img {
@@ -121,8 +145,19 @@ header {
     height: auto;
 }
 
+
+/* Estilos de la sección aboutme */
 .aboutme--container {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: end;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.aboutme--image img{
+    width: 30vw;
 }
 
 .aboutme--title {
@@ -131,12 +166,28 @@ header {
 }
 
 .aboutme--text {
-    font-size: 1.2em;
+    font-size: 1.2vw;
     line-height: 1.6;
     text-justify: newspaper;
+    text-align: justify;
 }
 
-/* Estilos de las secciones Works y Services */
+.aboutme--content {
+    padding-right: 15%;
+}
+
+.aboutme--content h3{
+    font-size: 3vw;
+    text-align: center;
+}
+
+.aboutme--content h3 span{
+    font-size: 4vw;
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 1px var(--headfoot-background);
+}
+
+/* Estilos comunes de las secciones Works y Services */
 .works--item,
 .services--item {
     width: 300px;
@@ -184,7 +235,7 @@ header {
 }
 
 .works--item--img:hover img {
-    filter: brightness(70%); /* Cambiar el valor para ajustar la intensidad del oscurecimiento */
+    filter: brightness(70%); 
 }
 
 /* Estilos de la sección Services */
@@ -193,18 +244,32 @@ header {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    padding-bottom: 0;
 }
 
 .services--item--img {
-    height: max-content;
+    flex-grow: 2;
 }
 
 .services--item--description {
-    height: max-content;
+    flex-grow: 1;
+    text-align: justify;
+    padding: 3px;
 }
 
 .services--item--img img{
     width: 80%;
+}
+
+.services--item--price {
+    background-color: var(--headfoot-background);
+    color: var(--primary-color);
+    width: 120%;
+    margin-left: -10%;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 0;
 }
 
 /* Estilos de la sección Skills */
@@ -245,7 +310,7 @@ header {
     transition: width 2s ease, background-color 2s ease-in-out;
 }
 
-/* Opinions */
+/* Estilos de la sección Opinions */
 .opinions--title {
     margin-bottom: 100px;
 }
@@ -257,7 +322,7 @@ header {
     justify-content: center
 }
 
-/* Opinions Magic card */
+/* Estilos para las Opinions card */
 .opinions--item {
     width: 190px;
     height: 254px;
@@ -310,7 +375,7 @@ header {
     border-radius: 10px;
 }
 
-/* Text */
+/* Estilo para el texto de las opiniones */
 .opinions--item--content--name {
     text-transform: uppercase;
     font-size: 0.75em;
@@ -326,42 +391,52 @@ header {
     font-style: italic;
 }
 
-/* Hover */
+/* Hover de las Opinions Cards */
 .opinions--item:hover .opinions--item--image {
     --size: 110px;
     width: var(--size);
     height: var(--size);
 }
 
-
+/* Estilos de la sección contacto */
+.contact--form {
+    background-color: var(--headfoot-background);
+    width: 60vw;
+}
 
 .contact--form {
     max-width: 500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    padding: 30px;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px 2px var(--box-shadow-color);
 }
 
 .contact--form label {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
 .contact--form input,
 .contact--form textarea {
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 110%;
+    color: var(--headfoot-background);
 }
 
 .contact--form button {
     background-color: var(--headfoot-background);
     color: #fff;
     padding: 10px 20px;
-    border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .contact--form button:hover {
@@ -369,6 +444,8 @@ header {
     color: var(--headfoot-background);
 }
 
+
+/* Estilos para el footer */
 .footer {
     background-color: var(--headfoot-background);
     color: #fff;
@@ -384,9 +461,15 @@ header {
 }
 
 .footer--social img {
-    width: 30px;
-    height: 30px;
+    width: 2vw;
+    height: 2vw;
     margin: 0 10px;
+    transition: all 0.5s ease;
+}
+
+.footer--social img:hover {
+    width: 2.3vw;
+    height: 2.3vw;
 }
 
 .footer--nav ul {
@@ -401,4 +484,179 @@ header {
     color: #fff;
     margin-right: 20px;
     font-weight: bold;
+    font-size: 1vw;
+    transition: color 0.5s ease;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 1000px) {
+    header{
+        opacity: 98%;
+        height: 5vh;
+    }
+
+    .title{
+        font-size: 100%
+    }
+
+    .menu__nav__list{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        position: fixed;
+        top: 6.95vh;
+        left: 0%;
+        flex-direction: column;
+        width: 90%;
+        font-size: 20px;
+        text-align: center;
+        transition: all 1s ease;
+    }
+
+    .menu__nav__list__link {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--background-color);
+    }
+
+    .menu__nav__list__link:nth-child(7) {
+        border-bottom: none;
+    }
+
+    .menu__nav__list__link a{
+        font-size: 100% !important;
+        text-align: center;
+    }
+
+    .menu--toggle--input {
+        opacity: 0;
+    }
+      
+    .menu--toggle--label {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition-duration: .5s;
+    }
+      
+    .menu--toggle--bars {
+        width: 100%;
+        height: 4px;
+        background-color: var(--background-color);
+        border-radius: 4px;
+    }
+      
+    .menu--toggle--bars:nth-of-type(2) {
+        transition-duration: .8s;
+    }
+      
+    .menu--toggle--bars:nth-of-type(1), .menu--toggle--bars:nth-of-type(3) {
+        width: 70%;
+    }
+      
+    .menu--toggle--input:checked + .menu--toggle--label .menu--toggle--bars {
+        position: absolute;
+        transition-duration: .5s;
+    }
+      
+    .menu--toggle--input:checked + .menu--toggle--label .menu--toggle--bars:nth-of-type(2) {
+        transform: scaleX(0);
+        transition-duration: .5s;
+    }
+      
+    .menu--toggle--input:checked + .menu--toggle--label .menu--toggle--bars:nth-of-type(1) {
+        width: 100%;
+        transform: rotate(45deg);
+        transition-duration: .5s;
+    }
+      
+     .menu--toggle--input:checked + .menu--toggle--label .menu--toggle--bars:nth-of-type(3) {
+        width: 100%;
+        transform: rotate(-45deg);
+        transition-duration: .5s;
+     }
+      
+    .menu--toggle--input:checked + .menu--toggle--label {
+        transition-duration: .5s;
+        transform: rotate(180deg);
+     }
+
+    .menu--toggle--input:checked ~ .menu__nav__list{
+        visibility: visible; 
+        opacity: 100%;
+    }
+
+    .menu--toggle--input:checked ~ .menu__nav__list{
+        display: flex; 
+    }
+
+    .hero{
+        background-position: right;
+        justify-content: center;
+    }
+
+    .hero--image{
+        display: none;
+    }
+
+    .hero--content{
+        margin: 0;
+        margin-top: 50vh;
+    }
+
+    .hero--content--github img{
+        width: 20vw;
+        height: 20vw;
+        margin: 0;
+    }
+
+    .aboutme--container{
+        flex-direction: column-reverse;
+    }
+
+    .aboutme--text{
+        font-size: 70%;
+        margin: 0;
+    }
+
+    .aboutme--image img{
+        margin: 0;
+        margin-left: -80%;
+    }
+
+    .works--item--img{
+        margin-top: -3%;
+    }
+
+    .opinions--item{
+        margin-bottom: 20%;
+    }
+
+    .footer{
+        justify-content: center;
+    }
+
+    .footer--nav{
+        display: none;
+    }
+
+    .footer--social img{
+        width: 4vw;
+        height: 4vw;
+    }
+
+}
+
+/* Mejora de estilo para tablets */
+@media screen and (max-width: 1000px) and (min-width: 750px) {
+    .menu__nav__list{
+        top: 6.5vh;
+        width: 95% !important;
+    }
 }

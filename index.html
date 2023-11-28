@@ -13,6 +13,12 @@
         <h1 class="title">Pablo Vacas García</h1>
         <!-- Menú de navegación -->
         <nav class="menu__nav">
+                <input type="checkbox" id="checkbox" class="menu--toggle--input">
+                <label for="checkbox" class="menu--toggle--label">
+                    <div class="menu--toggle--bars"></div>
+                    <div class="menu--toggle--bars"></div>
+                    <div class="menu--toggle--bars"></div>
+                </label>
             <ul class="menu__nav__list">
                 <li class="menu__nav__list__link"><a href="#home">Home</a></li>
                 <li class="menu__nav__list__link"><a href="#aboutme">About Me</a></li>
@@ -30,7 +36,7 @@
             <div class="hero--content">
                 <h2 class="hero--content--name">Pablo Vacas García</h2>
                 <h3 class="hero--content--profession">Web Developer</h3>
-                <a class="hero--content--github" href="https://github.com/pablovacasgarcia"><img src="Src/Img/github.png" alt="Github Logo"></a>
+                <a class="hero--content--github" target="_blankc4x3d1ws" href="https://github.com/pablovacasgarcia"><img src="Src/Img/github.png" alt="Github Logo"></a>
             </div>
 
             <div class="hero--image">
@@ -42,51 +48,57 @@
 
         <!-- Sección about me, contendrá información personal -->
         <section class="aboutme" id="aboutme">
+            <h2 class="aboutme--title">About Me</h2>
             <div class="aboutme--container">
-                <h2 class="aboutme--title">About Me</h2>
-                <p class="aboutme--text">Hello! My name is Pablo Vacas García and I am a Web Developer based in Spain. I specialize in building modern, responsive, and high-performance websites. With a background in graphic design, photography, and programming, I can handle a variety of tasks. </p>
+                <div class="aboutme--content">
+                    <h3>Know Who <span>I'm</span></h3>
+                <p class="aboutme--text">Hello! My name is Pablo Vacas García and I am a Web Developer based in Spain. I specialize in building modern, responsive, and high-performance websites. With a background in graphic design and programming, I can handle a variety of tasks. </p>
+                </div>
+                <div class="aboutme--image">
+                    <img src="Src/Img/aboutMe.webp" alt="About Me">
+                </div>
             </div>
         </section>
 
         <!-- Sección works, contendrá proyectos con una breve descripción -->
         <section class="works" id="works">
+            <h2 class="works--title">Works</h2>
             <div class="works--container">
-                <h2 class="works--title">Works</h2>
                 <div class="works--list">
                     <div class="works--item">
                         <div class="works--item--img">
                             <a href="https://pablovacasgarcia.github.io/JavaSflix/" target="_blank"><img src="Src/Img/JavaSflix.png" alt="JavaSflix"></a>
                         </div>
-                        <h3 class="works--item--title">Project 1</h3>
-                        <p class="works--item--description">Description of Project 1</p>
+                        <h3 class="works--item--title">JavaSflix</h3>
+                        <p class="works--item--description">Recopilation of series and movies with relevant information, using OMBD Api</p>
                     </div>
                     <div class="works--item">
                         <div class="works--item--img">
                             <a href="https://pablovacasgarcia.github.io/JSPong/" target="_blank"><img src="Src/Img/JSPong.png" alt="JSPong"></a>
                         </div>
-                        <h3 class="works--item--title">Project 2</h3>
-                        <p class="works--item--description">Description of Project 2</p>
+                        <h3 class="works--item--title">JS Pong</h3>
+                        <p class="works--item--description">A Pong game made with vanilla java Script, using SVG</p>
                     </div>
                     <div class="works--item">
                         <div class="works--item--img">
                             <a href="https://pablovacasgarcia.github.io/ReadingList/" target="_blank"><img src="Src/Img/ReadingList.png" alt="ReadingList"></a>
                         </div>
-                        <h3 class="works--item--title">Project 3</h3>
-                        <p class="works--item--description">Description of Project 3</p>
+                        <h3 class="works--item--title">Reading List</h3>
+                        <p class="works--item--description">Simulation of a Library, add, read and delete books.</p>
                     </div>
                     <div class="works--item">
                         <div class="works--item--img">
                             <a href="https://pablovacasgarcia.github.io/MiniJuegos/" target="_blank"><img src="Src/Img/MiniJuegos.png" alt="MiniJuegos"></a>
                         </div>
-                        <h3 class="works--item--title">Project 3</h3>
-                        <p class="works--item--description">Description of Project 3</p>
+                        <h3 class="works--item--title">MiniJuegos</h3>
+                        <p class="works--item--description">Recopilation of 4 small JavaScript Projects, including hang-man, clock, list and pairs.</p>
                     </div>
                     <div class="works--item">
                         <div class="works--item--img">
                             <a href="https://pablovacasgarcia.github.io/WhatColor/" target="_blank"><img src="Src/Img/WhatColor.png" alt="WhatColor"></a>
                         </div>
-                        <h3 class="works--item--title">Project 3</h3>
-                        <p class="works--item--description">Description of Project 3</p>
+                        <h3 class="works--item--title">WhatColor</h3>
+                        <p class="works--item--description">Guessing RGB colors game, made with vanilla JavaScript.</p>
                     </div>
                 </div>
             </div>
@@ -94,8 +106,8 @@
 
         <!-- Sección services, contendrá los servicios que oferto, descripción y precio -->
         <section class="services" id="services">
+            <h2 class="services--title">Services</h2>
             <div class="services--container">
-                <h2 class="services--title">Services</h2>
                 <div class="services--list">
                     <div class="services--item">
                         <h3 class="services--item--title">Web Development</h3>
@@ -206,8 +218,8 @@
 
         <!-- Sección Opinions, contendrá comentarios de clientes satisfechos -->
         <section class="opinions" id="opinions">
+            <h2 class="opinions--title">Opinions</h2>
             <div class="opinions--container">
-                <h2 class="opinions--title">Opinions</h2>
                 <div class="opinions--list">
                     <div class="opinions--item">
                         <div class="opinions--item--image">
@@ -252,8 +264,8 @@
 
         <!-- Sección contact, contendrá formulario de contacto y enlaces a redes sociales -->
         <section class="contact" id="contact">
+            <h2 class="contact--title">Contact</h2>
             <div class="contact--container">
-                <h2 class="contact--title">Contact</h2>
                 <form class="contact--form">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -285,7 +297,7 @@
             <div class="footer--social">
                 <a href="#"><img src="Src/img/linkedIn.png" alt="LinkedIn"></a>
                 <a href="#"><img src="Src/img/github.png" alt="GitHub"></a>
-                <a href="#"><img src="Src/img/gmail.png" alt="Gmail"></a>
+                <a href="#"><img src="Src/img/gmail.webp" alt="Gmail"></a>
             </div>
         </div>
     </footer>
