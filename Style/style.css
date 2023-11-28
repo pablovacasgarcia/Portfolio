@@ -1,6 +1,6 @@
 /* Definición de variables personalizadas */
 :root {
-    --font-family: 'Arial', sans-serif;  /* Fuente principal */
+    --font-family: "RobotoCondensed";  /* Fuente principal */
     --primary-color: #fff;               /* Color principal */
     --secondary-color: #ffd700;          /* Color secundario */
     --background-color: #f2f2f2;        /* Color de fondo */
@@ -8,6 +8,11 @@
     --text-color: #333;                 /* Color de texto principal */
     --secondary-color: #42caff;          /* Color de secundario */
     --headfoot-background: #333;        /* Color de encabezado/pie de página */
+}
+
+@font-face {
+    font-family: "RobotoCondensed";
+    src: url(../Src/fonts/RobotoCondensed-Regular.ttf);
 }
 
 /* Estilos generales del body */
