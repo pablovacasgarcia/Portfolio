@@ -6,8 +6,7 @@
     --background-color: #f2f2f2;        /* Color de fondo */
     --box-shadow-color: rgba(0, 0, 0, 0.1);  /* Color de sombra */
     --text-color: #333;                 /* Color de texto principal */
-    --link-color: #42caff;              /* Color de enlaces */
-    --hover-color: #e81aff;             /* Color de hover */
+    --secondary-color: #42caff;          /* Color de secundario */
     --headfoot-background: #333;        /* Color de encabezado/pie de página */
 }
 
@@ -379,7 +378,7 @@ header {
 .opinions--item--content--name {
     text-transform: uppercase;
     font-size: 0.75em;
-    color: var(--link-color);
+    color: var(--secondary-color);
     letter-spacing: 0.05rem;
 }
 
