@@ -9,7 +9,7 @@ window.addEventListener('scroll', function () {
     var opinions = document.querySelector('.opinions');
     
 
-    if (window.scrollY > header.style.width+200) {
+    if (window.scrollY > 100) {
         header.style.backgroundColor = 'var(--headfoot-background)'
         header.style.padding = '10px 0';
     } else {
@@ -17,7 +17,7 @@ window.addEventListener('scroll', function () {
         header.style.padding = '20px 0';
     }
 
-    if (window.scrollY > skills.getBoundingClientRect().top+1800 && window.scrollY < opinions.getBoundingClientRect().top+2500) {
+    if (window.scrollY > skills.getBoundingClientRect().top+1900 && window.scrollY < opinions.getBoundingClientRect().top+2500) {
         i=0;
         skillsBar.forEach(bar => {
             bar.style.width=skillsLevel[i].textContent;

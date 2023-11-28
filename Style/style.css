@@ -180,6 +180,31 @@ header {
     width: 120%;
     margin-left: -10%;
     margin-top: -7%;
+    transition: filter 0.5s ease;
+}
+
+.works--item--img:hover img {
+    filter: brightness(70%); /* Cambiar el valor para ajustar la intensidad del oscurecimiento */
+}
+
+/* Estilos de la sección Services */
+.services--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.services--item--img {
+    height: max-content;
+}
+
+.services--item--description {
+    height: max-content;
+}
+
+.services--item--img img{
+    width: 80%;
 }
 
 /* Estilos de la sección Skills */
@@ -277,6 +302,12 @@ header {
     height: 90%;
     transform: translate(-50%, -50%);
     border: 1rem solid var(--background-color);
+}
+
+.opinions--item--image img {
+    width: calc(100% - 20px);
+    margin-top: 16%;
+    border-radius: 10px;
 }
 
 /* Text */
